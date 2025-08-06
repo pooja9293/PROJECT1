@@ -1,0 +1,80 @@
+<mvc:View controllerName="com.tolaram.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+		xmlns:f="sap.ui.layout.form"
+		xmlns:table="sap.m.table"
+		xmlns:core="sap.ui.core">
+<Page id="page" title="my title" >
+    <f:SimpleForm editable="true" layout="ResponsiveGridLayout" breakpointXL="1440">
+			<Label text="Name"/>
+			<Input  id ="twoo" placeholder="Enter your name" width="175px" value="{model>/formdata/name}" required="true"/>
+			<Label text="Email"/>
+			<Input id ="threee" placeholder="Enter your email" width="175px" value="{model>/formdata/email}" required="true" />
+			<Label text="PhoneNumber"/>
+			<Input id="onee" placeholder="Enter your number" width="175px" value="{model>/formdata/phone}" required="true" liveChange="Onsubmit" />
+			<Label text="Country"/>
+			<Select width="175px" selectedKey="{model>/formdata/country}">
+				<items value="{model>/formdata/country}">
+					<core:Item key="NA" text="Select"></core:Item>
+					<core:Item key="IN" text="INDIA"></core:Item>
+					<core:Item key="US" text="USA"></core:Item>
+				</items>
+			</Select>
+			<!-- <Input placeholder="Enter country" width="175px" value="{model>/formdata/country}" /> -->
+			<Label text="Dateofbirth" width="200px"></Label>
+			<DatePicker placeholder="Enter the date"
+					valueFormat="dd-MM-yyyy"
+					displayFormat="long"
+					change="onDateChange"
+					width="175px" 
+					value="{model>/formdata/dob}"/>
+  <HBox width="175px">
+	<Text 
+    id="ageText"
+    text="{ path: 'model>/formdata/dob', formatter: '.formatter.getAgeText' }"/>
+	</HBox>
+		</f:SimpleForm>
+	    <f:SimpleForm layout="ResponsiveGridLayout" >
+	            <core:Title text=" "/> <!-- spacer if needed -->
+				<VBox class="one">
+				<Button
+					id="_IDGenButton"
+					text="Submit"
+					type="Emphasized"
+					width="150px"
+					press="onPressSubmit"
+					class="sapUiMediumMarginLeft" />
+				</VBox>
+		</f:SimpleForm>
+<f:SimpleForm >
+	<Table inset="false" class = "sapUiMediumMarginTop" items="{model>/tabledata}" id="tab">
+		<columns>
+    <Column><Text text="Name" /></Column>
+    <Column><Text text="Email" /></Column>
+    <Column><Text text="Phone" /></Column>
+    <Column><Text text="Country" /></Column>
+    <Column><Text text="DOB" /></Column>
+	<Column ><Text text=""></Text></Column>
+		</columns>
+		  <items>
+    <ColumnListItem type="Active" press="onitempress"> 
+      <cells>
+        <Text text="{model>name}" />
+        <Text text="{model>email}" />
+        <Text text="{model>phone}" />
+        <Text text="{model>country}" />
+        <Text text="{model>dob}" />
+		<Button text="Edit" press="onEditButton"></Button>
+      </cells>
+    </ColumnListItem>
+  </items>
+	</Table>
+</f:SimpleForm>
+<!-- <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button text="Back" type="Accept" press="handlenavigation" />
+            </Toolbar>
+</footer> -->
+</Page>
+</mvc:View>

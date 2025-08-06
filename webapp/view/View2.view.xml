@@ -1,0 +1,19 @@
+<mvc:View
+  controllerName="com.tolaram.project1.controller.View2"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+    <Page title="View 2">
+        <VBox alignItems="Center" class="one">
+            <Text text="{mod>/form/name}"/>
+        <VBox class="sapUiSmallMarginTop"><Text text="{mod>/form/email}"/></VBox>
+        <VBox class="sapUiSmallMarginTop"><Text text="{mod>/form/phone}"/></VBox>
+        <VBox class="sapUiSmallMarginTop"><Text text="{mod>/form/country}"/></VBox>
+        </VBox>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button text="Back" type="Accept" press="handlenavigation" />
+            </Toolbar>
+</footer>
+    </Page>
+</mvc:View>

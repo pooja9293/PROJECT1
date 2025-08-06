@@ -1,0 +1,25 @@
+.above25 {
+  background-color: #ffdddd; /* Light Red */
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.below25 {
+  background-color: #ddffdd; /* Light Green */
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.fir{
+  align-items: center;   /* vertically centers DatePicker & Text */
+  display: flex;         /* make it a flex container */
+  width: auto; 
+}
+
+.one {
+  border: 3px double #000; /* You can adjust border width here (3px, 1px, etc.) */
+  margin: 50px auto 0 auto; /* Top margin 50px, center horizontally */
+  width: 300px; /* or max-width: 90%; or any value you want */
+  padding: 10px; /* optional, for some spacing inside */
+  /* box-sizing: border-box; include padding and border in width */
+}

@@ -1,0 +1,54 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+
+  <Dialog id="dig"    
+   contentWidth="500px"
+    contentHeight="auto"
+    title="Emp Details"
+    draggable="true">
+    <VBox alignItems="Center">
+    <HBox >
+        <Label text="Name" width="100px" class="sapUiSmallMarginLeft"></Label>
+        <Input id="name" placeholder="enter the name" width="175px" value="{model>/formdata/name}"></Input>
+        </HBox>
+        <HBox>
+        <Label text="Email" width="100px"/>
+			<Input placeholder="Enter your email" width="175px" value="{model>/formdata/email}" required="true" />
+			</HBox>
+            <HBox>
+            <Label text="PhoneNumber" width="100px"/>
+            <Input placeholder="Enter your number" width="175px" value="{model>/formdata/phone}" required="true" />
+			</HBox>
+            <HBox >
+            <Label text="Country" width="100px"/>
+			<Select width="175px" selectedKey="{model>/formdata/country}">
+				<items value="{model>/formdata/country}">
+					<core:Item key="NA" text="Select"></core:Item>
+					<core:Item key="IN" text="INDIA"></core:Item>
+					<core:Item key="US" text="USA"></core:Item>
+				</items>
+			</Select>
+            </HBox>
+            <HBox>
+			<Label text="Dateofbirth" width="100px"></Label>
+			<DatePicker placeholder="Enter the date"
+					valueFormat="dd-MM-yyyy"
+					displayFormat="long"
+					change="onDateChange"
+					width="175px" 
+					value="{model>/formdata/dob}"/>
+        </HBox>
+        <!-- <HBox class="first" width="50px" >
+            <Button text="Save" press="Onsave"></Button>
+            <VBox width="1%"/>
+            <Button text="Cancel" press="Oncancel"></Button>
+        </HBox> -->
+  
+    <Toolbar >
+        <Button text="Save" press="onsave" type="Accept"></Button>
+         <Button text="Cancel" press="oncancel" type="Reject"></Button>
+    </Toolbar>
+          </VBox>
+  </Dialog>
+  </core:FragmentDefinition>
