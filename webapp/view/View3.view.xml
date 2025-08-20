@@ -1,0 +1,15 @@
+<mvc:View
+  controllerName="com.tolaram.project1.controller.View3"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+  <Page title="View 3" >
+  <VBox alignItems="Center">
+  <Image id="imgg" src="image/test.webp" alt="no image found"></Image>
+  </VBox>
+      </Page>
+  <Toolbar >
+  <ToolbarSpacer />
+    <Button text="back" press="onbackpress"/>
+  </Toolbar>
+
+</mvc:View>

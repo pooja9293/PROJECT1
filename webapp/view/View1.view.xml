@@ -36,7 +36,7 @@
 		</f:SimpleForm>
 	    <f:SimpleForm layout="ResponsiveGridLayout" >
 	            <core:Title text=" "/> <!-- spacer if needed -->
-				<VBox class="one">
+				<VBox>
 				<Button
 					id="_IDGenButton"
 					text="Submit"

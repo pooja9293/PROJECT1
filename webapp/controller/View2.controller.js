@@ -36,6 +36,10 @@ sap.ui.define([
 
         handlenavigation: function() {
             window.history.go(-1); 
+        },
+
+        handleimgnav : function() {
+            this.getOwnerComponent().getRouter().navTo("RouteView3");
         }
     });
 });

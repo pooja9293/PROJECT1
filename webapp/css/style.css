@@ -23,3 +23,8 @@
   padding: 10px; /* optional, for some spacing inside */
   /* box-sizing: border-box; include padding and border in width */
 }
+
+.imgg {
+  display: block;
+  margin: 0 auto; /* centers horizontally */
+}
